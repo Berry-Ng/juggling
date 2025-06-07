@@ -1,5 +1,5 @@
 Ball ball1 = new Ball(400,400);
-Player player1 = new Player(400,770);
+Player player1 = new Player(400,785);
 
 boolean a,d;
 
@@ -16,6 +16,9 @@ void draw(){
   
   ball1.move();
   player1.move();
+  
+  ball1.wallHit();
+  ball1.collide();
   
 }
 

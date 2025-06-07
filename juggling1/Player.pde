@@ -4,13 +4,14 @@ class Player{
   private int y;
   
   public Player(int x,int y){
-    this.xSpeed = 25;
+    this.xSpeed = 15;
     this.x = x;
     this.y = y;
   }
   
   void draw(int length,int width){
-    rect(x,y,length,width);
+    rect(x-length/2,y-width/2,length,width);
+    
   }
   
   public void move(){
