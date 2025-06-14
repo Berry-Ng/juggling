@@ -4,6 +4,7 @@ class Ball{
   private int x;
   private int y;
   
+  
   public Ball(int x, int y){
     this.xSpeed = (int) random(0,10);
     this.ySpeed = 7;
@@ -36,9 +37,13 @@ class Ball{
   }
   
   public void collide(){
-    if(abs(this.x - player1.x) < 40 && abs(this.y - player1.y) < 40){
-      this.xSpeed = -xSpeed;
+    if(abs(this.x - player1.x) < 100 && abs(this.y - player1.y) < 40){
+      this.xSpeed = this.x-player1.x;
       this.ySpeed = -ySpeed;
+
+        score++;
+      
     }
   }
+  
 }
